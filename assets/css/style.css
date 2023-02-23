@@ -14,8 +14,8 @@
 
 .hero-section .tagline {
     box-sizing: border-box;
-    padding: .5em 0;
-    ;
+    padding: 0.5em 0;
+    margin-bottom: 30px;
 
     width: 350px;
     /* height: 40px; */
@@ -140,7 +140,12 @@
 
 
 /* Partners Section  */
+.company-blue {
+    color: #4666FF;
+}
+
 .partners {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,17 +153,67 @@
 }
 
 .partners .left {
-    width: 30%;
+    width: 35%;
     padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 .partners .right {
-    width: 70%;
+    width: 65%;
 
+}
+/* Logo Slider */
+
+.logo-slider {
+	background: white;
+	-webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+	box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.logo-slider::before, .logo-slider::after {
+	background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+	background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+	content: "";
+	height: 175px;
+	/* position: absolute; */
+	width: 200px;
+	z-index: 2;
+}
+
+.logo-slider::after {
+	right: 0;
+	top: 0;
+	-webkit-transform: rotateZ(180deg);
+	transform: rotateZ(180deg);
+}
+
+.logo-slider::before {
+	left: 0;
+	top: 0;
+}
+
+.logo-slider .logo-slide-track {
+	-webkit-animation: logo-scroll 60s linear infinite;
+	animation: logo-scroll 60s linear infinite;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: calc(250px * 14);
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.logo-slider .slide {
+	height: 50px;
+	width: 250px;
+	padding: 20px;
 }
 
 .partners .right img {
@@ -169,15 +224,28 @@
 
 /* Statistics Section */
 .statistics .stats-container {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    font-size: 30px;
+    text-align: center;
 }
 
 .statistics .stats-container div {
     height: 200px;
     width: 27%;
-    box-shadow: 10px 10px 10px rgba(168, 204, 212, 0.157), 10px 8px 32px rgba(196, 224, 232, 0.186);
+    /* box-shadow: 10px 10px 10px rgba(168, 204, 212, 0.157), 10px 8px 32px rgba(196, 224, 232, 0.186); */
+    border-top: 1px solid rgba(131, 147, 171, 0.4);
+    border-bottom: 1px solid rgba(131, 147, 171, 0.4);
+}
+.statistics .stats-container .b {
+    height: 200px;
+    width: 27%;
+    border: 1px solid rgba(131, 147, 171, 0.4);
+
 }
 
 .statistics .stats-container div {
@@ -188,7 +256,34 @@
     font-weight: bold;
     margin-bottom: 40px;
 }
+.about-container {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin: 100px;
+}
+.about .hero-left {
+    flex: 1;
+    font-size: 40px;
+    text-align: right;
+    padding-right: 50px ;
 
+}
+.about .hero-right {
+    color: gray;
+    flex: 1;
+    font-size: 23px;
+    display: flex;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-right: 100px;
+    text-align: justify;
+}
+.services {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
 @media (max-width: 1598px) {
     .hero-search .searchborder {
         width: 70%
@@ -249,7 +344,11 @@
 
 
 /* Partners Section Responsiveness  */
-@media(max-width:600px) {
+@media(max-width:700px) {
+    .partner {
+        display: none;
+        flex-direction: column;
+    }
     .partners .right img {
         width: 170px;
     }
@@ -257,6 +356,31 @@
     .partners .left {
         font-size: 0.7em;
     }
+}
+
+/* Logo-slider*/
+@-webkit-keyframes logo-scroll {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	100% {
+		-webkit-transform: translateX(calc(-250px * 7));
+		transform: translateX(calc(-250px * 7));
+	}
+}
+
+@keyframes logo-scroll {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	100% {
+		-webkit-transform: translateX(calc(-250px * 7));
+		transform: translateX(calc(-250px * 7));
+	}
 }
 
 
