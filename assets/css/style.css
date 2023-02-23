@@ -279,11 +279,23 @@
     text-align: justify;
 }
 .services {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 10%;
     text-align: center;
 }
+.services .service-header {
+    font-size: 40px;
+}
+.services .service-para {
+    margin-left: 10%;
+    margin-right: 10%;
+    color: gray;
+    padding: 2%;
+    font-size: 25px;
+}
+
+
 @media (max-width: 1598px) {
     .hero-search .searchborder {
         width: 70%
