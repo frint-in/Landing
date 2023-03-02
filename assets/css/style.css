@@ -211,6 +211,10 @@
     align-items: center;
     margin-bottom: 90px;
 }
+.partners .partner-container{
+    width: 80%;
+
+}
 
 /* .partners .left {
     width: 35%;
@@ -222,7 +226,7 @@
 } */
 
 .partners .right {
-    width: 100%;
+    width: 80%;
 
 }
 /* Logo Slider */
